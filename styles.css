@@ -1,0 +1,109 @@
+:root {
+  --indigo: oklch(56.6% 0.27 274);
+  --indigo-10: oklch(from var(--indigo) 10% c h);
+  --indigo-20: oklch(from var(--indigo) 20% c h);
+  --indigo-30: oklch(from var(--indigo) 30% c h);
+  --indigo-40: oklch(from var(--indigo) 40% c h);
+  --indigo-50: oklch(from var(--indigo) 50% c h);
+  --indigo-60: oklch(from var(--indigo) 60% c h);
+  --indigo-70: oklch(from var(--indigo) 70% c h);
+  --indigo-80: oklch(from var(--indigo) 80% c h);
+  --indigo-90: oklch(from var(--indigo) 90% c h);
+  --indigo-100: oklch(from var(--indigo) 100% c h);
+}
+
+@layer general-styling {
+  html {
+    color-scheme: dark light;
+    font-family: system-ui;
+    line-height: 1.6;
+  }
+
+  body {
+    margin: 1rem;
+  }
+
+  section {
+    display: flex;
+    gap: 1rem;
+    margin-block: 2rem;
+  }
+}
+
+header h1 {
+  text-align: center;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+  background-color: var(--bg, var(--indigo));
+  border-radius: 4px;
+}
+
+div:nth-child(1) {
+  --bg: var(--indigo-10);
+}
+div:nth-child(2) {
+  --bg: var(--indigo-20);
+}
+div:nth-child(3) {
+  --bg: var(--indigo-30);
+}
+div:nth-child(4) {
+  --bg: var(--indigo-40);
+}
+div:nth-child(5) {
+  --bg: var(--indigo-50);
+}
+div:nth-child(6) {
+  --bg: var(--indigo-60);
+}
+div:nth-child(7) {
+  --bg: var(--indigo-70);
+}
+div:nth-child(8) {
+  --bg: var(--indigo-80);
+}
+div:nth-child(9) {
+  --bg: var(--indigo-90);
+}
+div:nth-child(10) {
+  --bg: var(--indigo-100);
+}
+
+.complex {
+  --indigo: oklch(56.6% 0.27 274);
+  --c-base: 0.12;
+
+  --indigo-10: oklch(
+    from var(--indigo) 10% calc(var(--c-base) + (sin(0.09 * pi) * c)) h
+  );
+  --indigo-20: oklch(
+    from var(--indigo) 20% calc(var(--c-base) + (sin(0.81 * pi) * c)) h
+  );
+  --indigo-30: oklch(
+    from var(--indigo) 30% calc(var(--c-base) + (sin(0.72 * pi) * c)) h
+  );
+  --indigo-40: oklch(
+    from var(--indigo) 40% calc(var(--c-base) + (sin(0.63 * pi) * c)) h
+  );
+  --indigo-50: oklch(
+    from var(--indigo) 50% calc(var(--c-base) + (sin(0.54 * pi) * c)) h
+  );
+  --indigo-60: oklch(
+    from var(--indigo) 60% calc(var(--c-base) + (sin(0.45 * pi) * c)) h
+  );
+  --indigo-70: oklch(
+    from var(--indigo) 70% calc(var(--c-base) + (sin(0.36 * pi) * c)) h
+  );
+  --indigo-80: oklch(
+    from var(--indigo) 80% calc(var(--c-base) + (sin(0.27 * pi) * c)) h
+  );
+  --indigo-90: oklch(
+    from var(--indigo) 90% calc(var(--c-base) + (sin(0.18 * pi) * c)) h
+  );
+  --indigo-100: oklch(
+    from var(--indigo) 100% calc(var(--c-base) + (sin(0.09 * pi) * c)) h
+  );
+}
